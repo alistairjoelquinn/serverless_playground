@@ -10,8 +10,12 @@ const theme = createMuiTheme({
             contrast: Colors.paleWhite
         },
         secondary: {
-            main: Colors.lightGreen
-        }
+            light: Colors.palePink,
+            main: Colors.middlePink,
+            dark: Colors.darkPink,
+            contrast: Colors.lightGreen
+        },
+
     },
     status: {
         danger: 'tomato'
