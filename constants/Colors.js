@@ -6,5 +6,6 @@ export default {
     lightGreen: '#dbf4a7',
     palePink: '#f4998d',
     middlePink: '#F4796B',
-    darkPink: '#F44E3F'
+    darkPink: '#F44E3F',
+    grey: 'dimgrey'
 };

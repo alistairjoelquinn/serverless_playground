@@ -1,19 +1,21 @@
 import React from 'react';
-import { Button, Typography } from '@material-ui/core';
 import { ThemeProvider, Grid } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles'
 
 import Colors from '../../constants/Colors';
 import theme from '../UI/theme';
 import Header from './Header';
+import LandingPageContent from './LandingPageContent';
 
 const useStyles = makeStyles({
     setupStyle: {
         textDecoration: 'underline',
         marginBottom: 30
     },
-    button: {
-        color: Colors.paleWhite
+    background: {
+        backgroundColor: Colors.grey,
+        height: '100vh',
+        paddingTop: 20
     }
 });
 
@@ -26,35 +28,14 @@ export default function App() {
                 <Grid item>
                     <Header />
                 </Grid>
-                <Grid item container>
-                    <Grid item sm={2} xs={1}/>
-                    <Grid item sm={8} xs={12}>
-                        This is text and an introduction to the things in text which are being introduced by the clicking of the...
-                        <Button 
-                            className={classes.button}
-                            color="secondary"
-                            variant="contained" 
-                        >
-                            Big button
-                        </Button>
+                <Grid item container className={classes.background}>
+                    <Grid item sm={1} xs={false}/>
+                    <Grid item sm={10} xs={12}>
+                        <LandingPageContent />
                     </Grid>
-                    <Grid item sm={2} xs={1}/>
+                    <Grid item sm={1} xs={false}/>
                 </Grid>
             </Grid>
         </ThemeProvider>
     );
 };
-
-// const styles = {
-//     main: {
-//         // display: 'flex',
-//         // flexDirection: 'column',
-//         // justifyContent: 'center',
-//         // alignItems: 'center',
-//         margin: 0,
-//         height: '100vh',
-//         width: '100vw',
-//         backgroundColor: Colors.middleBlue,
-//         color: Colors.paleWhite
-//     }
-// };
