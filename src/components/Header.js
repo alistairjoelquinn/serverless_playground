@@ -1,13 +1,23 @@
 import React from 'react';
-import { AppBar, Toolbar } from '@material-ui/core';
+import { AppBar, Toolbar, Typography, makeStyles } from '@material-ui/core';
+import CakeIcon from '@material-ui/icons/Cake';
+
+const useStyles = makeStyles({
+    typographyStyles: {
+        flex: 1
+    }
+});
 
 const Header = props => {
+    const classes = useStyles();
+
     return (
-        <AppBar>
+        <AppBar position='static'>
             <Toolbar>
-                <Typography>
-                    
+                <Typography className={classes.typographyStyles}> 
+                    Alistair Quinn
                 </Typography>
+                <CakeIcon />
             </Toolbar>
         </AppBar>
     )

@@ -22,18 +22,12 @@ export default function App() {
 
     return (
         <ThemeProvider theme={theme}>
-            <Grid container direction='column' style={styles.main}>
+            <Grid container direction='column'>
                 <Grid item>
-                    <Typography 
-                        variant="span"
-                        className={classes.setupStyle}
-                    >
-                        Welcome
-                    </Typography>
                     <Header />
                 </Grid>
                 <Grid item container>
-                    <Grid item sm={2} xs={0}/>
+                    <Grid item sm={2} xs={1}/>
                     <Grid item sm={8} xs={12}>
                         This is text and an introduction to the things in text which are being introduced by the clicking of the...
                         <Button 
@@ -44,23 +38,23 @@ export default function App() {
                             Big button
                         </Button>
                     </Grid>
-                    <Grid item sm={2} xs={0}/>
+                    <Grid item sm={2} xs={1}/>
                 </Grid>
             </Grid>
         </ThemeProvider>
     );
 };
 
-const styles = {
-    main: {
-        // display: 'flex',
-        // flexDirection: 'column',
-        // justifyContent: 'center',
-        // alignItems: 'center',
-        margin: 0,
-        height: '100vh',
-        width: '100vw',
-        backgroundColor: Colors.middleBlue,
-        color: Colors.paleWhite
-    }
-};
+// const styles = {
+//     main: {
+//         // display: 'flex',
+//         // flexDirection: 'column',
+//         // justifyContent: 'center',
+//         // alignItems: 'center',
+//         margin: 0,
+//         height: '100vh',
+//         width: '100vw',
+//         backgroundColor: Colors.middleBlue,
+//         color: Colors.paleWhite
+//     }
+// };
