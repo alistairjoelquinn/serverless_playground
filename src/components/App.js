@@ -1,14 +1,24 @@
 import React from 'react';
 import { Button } from '@material-ui/core';
+import { ThemeProvider } from '@material-ui/core';
+
+import Colors from '../../constants/Colors';
+import theme from '../UI/theme';
 
 export default function App() {
+    console.log('theme: ', theme);
     return (
-        <div style={styles.main}>
-            <div style={styles.margin}>Al's online playground</div>
-            <Button variant="contained">
-                Big button
-            </Button>
-        </div>
+        <ThemeProvider theme={theme}>
+            <div style={styles.main}>
+                <div style={styles.margin}>Welcome</div>
+                <Button 
+                    color="secondary"
+                    variant="contained" 
+                >
+                    Big button
+                </Button>
+            </div>
+        </ThemeProvider>
     );
 };
 
@@ -21,8 +31,8 @@ const styles = {
         margin: 0,
         height: '100vh',
         width: '100vw',
-        backgroundColor: 'dimgrey',
-        color: 'antiquewhite'
+        backgroundColor: Colors.middleBlue,
+        color: Colors.paleWhite
     },
     margin: {
         margin: 20
