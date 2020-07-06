@@ -23,7 +23,7 @@ const useStyles = makeStyles({
 const LandingCard = props => {
     const classes = useStyles();
     const bull = <span className={classes.bullet}>•</span>;
-
+    const { datePosted } = props
     return (
         <Card>
             <CardHeader
@@ -38,7 +38,7 @@ const LandingCard = props => {
                     </IconButton>
                 }
                 title="Welcome to the Internet"
-                subheader="5th July, 2020"
+                subheader={datePosted}
             />
             <CardContent>
                 <Typography className={classes.title} color="textSecondary" gutterBottom>
@@ -51,7 +51,7 @@ const LandingCard = props => {
                     noun
                 </Typography>
                 <Typography variant="body2" component="p">
-                    well meaning and kindly.
+                    well meaning and lovely.
                     <br />
                     {'"a benevolent smile"'}
                 </Typography>

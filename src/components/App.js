@@ -14,8 +14,9 @@ const useStyles = makeStyles({
     },
     background: {
         backgroundColor: Colors.grey,
-        height: '100vh',
-        paddingTop: 20
+        height: '100%',
+        paddingTop: 20,
+        paddingBottom: 20
     }
 });
 
