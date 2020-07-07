@@ -28,12 +28,12 @@ const LandingCard = props => {
         <Card>
             <CardHeader
                 avatar={
-                    <Avatar aria-label="recipe" className={classes.avatar}>
+                    <Avatar aria-label="word-of-the-day" className={classes.avatar}>
                         A
                     </Avatar>
                 }
                 action={
-                    <IconButton aria-label="settings">
+                    <IconButton aria-label="hare">
                         <ShareIcon />
                     </IconButton>
                 }
@@ -57,7 +57,7 @@ const LandingCard = props => {
                 </Typography>
             </CardContent>
             <CardActions>
-                <Button size="small">Learn More</Button>
+                <Button size="small" color="secondary">Learn More</Button>
             </CardActions>
       </Card>
     );

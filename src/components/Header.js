@@ -1,6 +1,6 @@
 import React from 'react';
 import { AppBar, Toolbar, Typography, makeStyles } from '@material-ui/core';
-import CakeIcon from '@material-ui/icons/Cake';
+import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 
 const useStyles = makeStyles({
     typographyStyles: {
@@ -17,7 +17,7 @@ const Header = props => {
                 <Typography className={classes.typographyStyles}> 
                     Alistair Quinn
                 </Typography>
-                <CakeIcon />
+                <ShoppingCartIcon />
             </Toolbar>
         </AppBar>
     )
