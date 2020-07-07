@@ -5,7 +5,7 @@ import theme from '../UI/theme';
 import Header from './Header';
 import { BrowserRouter, Route } from 'react-router-dom';
 import HomePage from './HomePage';
-import Cake from './Cake';
+import Shop from './Shop';
 
 export default function App() {
     return (
@@ -16,7 +16,7 @@ export default function App() {
                     <Header />
                 </Grid>
                     <Route exact path="/" component={HomePage} />
-                    <Route path="/cake" component={Cake} />
+                    <Route path="/shop" component={Shop} />
                 </BrowserRouter>
             </Grid>
         </ThemeProvider>

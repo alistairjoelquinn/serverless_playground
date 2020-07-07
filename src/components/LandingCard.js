@@ -33,7 +33,7 @@ const LandingCard = props => {
                     </Avatar>
                 }
                 action={
-                    <IconButton aria-label="hare">
+                    <IconButton aria-label="share">
                         <ShareIcon />
                     </IconButton>
                 }

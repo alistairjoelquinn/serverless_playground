@@ -7,5 +7,6 @@ export default {
     palePink: '#f4998d',
     middlePink: '#F4796B',
     darkPink: '#F44E3F',
-    grey: 'dimgrey'
+    grey: 'dimgrey',
+    reactBlue: '#42485e'
 };
