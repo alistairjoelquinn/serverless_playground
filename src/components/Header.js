@@ -1,6 +1,7 @@
 import React from 'react';
 import { AppBar, Toolbar, Typography, makeStyles } from '@material-ui/core';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
+import { Link, BrowserRouter } from 'react-router-dom';
 
 const useStyles = makeStyles({
     typographyStyles: {
@@ -14,10 +15,14 @@ const Header = props => {
     return (
         <AppBar position='static'>
             <Toolbar>
-                <Typography className={classes.typographyStyles}> 
-                    Alistair Quinn
-                </Typography>
-                <ShoppingCartIcon />
+                <Link to='/' className={classes.typographyStyles}>
+                    <Typography> 
+                        Alistair Quinn
+                    </Typography>
+                </Link>
+                <Link to='/cake'>
+                    <ShoppingCartIcon />
+                </Link>
             </Toolbar>
         </AppBar>
     )
