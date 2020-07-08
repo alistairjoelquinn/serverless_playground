@@ -17,7 +17,8 @@ const useStyles = makeStyles({
     },
     textStyles: {
         color: Colors.reactBlue,
-        fontWeight: 'bold'
+        fontWeight: 'bold',
+        fontSize: 18
     }
 });
 
@@ -25,7 +26,7 @@ const Header = props => {
     const classes = useStyles();
 
     return (
-        <AppBar position='static'>
+        <AppBar position='fixed'>
             <Toolbar>
                 <NavLink 
                     to='/' 

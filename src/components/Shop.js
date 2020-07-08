@@ -33,6 +33,7 @@ const Shop = props => {
                         endIcon={<ShoppingCartIcon />}
                         href='https://www.youtube.com/watch?v=SRcnnId15BA'
                         target='_blank'
+                        // color='secondary'
                     >
                         Buy Things
                     </Button>

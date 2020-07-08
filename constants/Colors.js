@@ -1,5 +1,5 @@
 export default {
-    darkBlue: '#7d84b2',
+    darkBlue: '#2f3437',
     middleBlue: '#8e9dcc',
     lightBlue: '#d9dbf1',
     paleWhite: '#f9f9ed',
@@ -7,6 +7,7 @@ export default {
     palePink: '#f4998d',
     middlePink: '#F4796B',
     darkPink: '#F44E3F',
-    grey: 'dimgrey',
-    reactBlue: '#42485e'
+    grey: '#696969',
+    reactBlue: '#42485e',
+    darkModeText: '#eaeaea'
 };

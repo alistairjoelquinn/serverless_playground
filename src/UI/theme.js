@@ -13,12 +13,17 @@ const theme = createMuiTheme({
             light: Colors.palePink,
             main: Colors.middlePink,
             dark: Colors.darkPink,
-            contrast: Colors.lightGreen
+            contrast: Colors.paleWhite
         },
-
+        type: 'dark'
     },
     status: {
         danger: 'tomato'
+    },
+    typography: {
+        button: {
+            textTransform: "none"
+        }
     }
 });
 

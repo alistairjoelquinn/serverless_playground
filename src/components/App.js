@@ -12,11 +12,13 @@ export default function App() {
         <ThemeProvider theme={theme}>
             <Grid container direction='column'>
                 <BrowserRouter>
-                <Grid item>
-                    <Header />
-                </Grid>
-                    <Route exact path="/" component={LandingPage} />
-                    <Route path="/shop" component={Shop} />
+                    <Grid item>
+                        <Header />
+                    </Grid>
+                    <Grid item container style={{marginTop: '58px'}}>
+                        <Route exact path="/" component={LandingPage} />
+                        <Route path="/shop" component={Shop} />
+                    </Grid>
                 </BrowserRouter>
             </Grid>
         </ThemeProvider>
