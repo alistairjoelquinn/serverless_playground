@@ -7,13 +7,15 @@ import Colors from '../../constants/Colors';
 
 const useStyles = makeStyles({
     button: {
-        color: 'tomato',
-        alignSelf: 'center'
+        color: 'tomato'
     },
     background: {
         backgroundColor: Colors.grey,
         width: '100%',
-        height: '100%'
+        height: '100vh'
+    },
+    buttonContainer: {
+        marginTop: '40px'
     }
 });
 
@@ -22,9 +24,9 @@ const Shop = props => {
 
     return (
         <Grid container direction='column' className={classes.background}>
-            <Grid item container>
-                <Grid item sm={2}/>
-                <Grid item sm={8} className={classes.centered}>
+            <Grid item container className={classes.buttonContainer}>
+                <Grid item sm={4}/>
+                <Grid item container sm={4} justify='center'>
                     <Button 
                         variant='contained' 
                         className={classes.button}
@@ -35,11 +37,11 @@ const Shop = props => {
                         Buy Things
                     </Button>
                 </Grid>
-                <Grid item sm={2}/>
+                <Grid item sm={4}/>
             </Grid>
-            <Grid item container>
+            <Grid item container className={classes.buttonContainer}>
                 <Grid item sm={2}/>
-                <Grid item sm={8} className={classes.centered}>
+                <Grid item container sm={8} justify='center'>
                     <ButtonGroup variant='contained'>
                         <Button size="large" className={classes.button}>One</Button>
                         <Button size="large" className={classes.button}>Two</Button>
