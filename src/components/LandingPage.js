@@ -9,6 +9,7 @@ const useStyles = makeStyles({
     background: {
         backgroundColor: Colors.grey,
         height: '100%',
+        width: '100vw',
         paddingTop: 20,
         paddingBottom: 20
     }
@@ -19,11 +20,11 @@ const HomePage = props => {
 
     return (
         <Grid item container className={classes.background}>
-            <Grid item sm={2} xs={false}/>
-            <Grid item sm={10} xs={12}>
+            <Grid item sm={2}  xs={false}/>
+            <Grid item sm={8}  xs={12}>
                 <LandingPageContent />
             </Grid>
-            <Grid item sm={2} xs={false}/>
+            <Grid item sm={2}  xs={false}/>
         </Grid>
     );
 };

@@ -29,7 +29,7 @@ const LandingCard = props => {
             navigator.share({
                 title: 'Word of the Day',
                 date: datePosted,
-                word: `${props.w1 ? props.w1 : ''}${props.w2 ? props.w2 : ''}${props.w3 ? props.w3 : ''}${props.w4 ? props.w4 : ''}${props.w5 ? props.w5 : ''}${props.w6 ? props.w6 : ''}${props.w7 ? props.w7 : ''}`,
+                text: `${props.w1 ? props.w1 : ''}${props.w2 ? props.w2 : ''}${props.w3 ? props.w3 : ''}${props.w4 ? props.w4 : ''}${props.w5 ? props.w5 : ''}${props.w6 ? props.w6 : ''}${props.w7 ? props.w7 : ''}`,
                 type: wordType, 
                 definition, 
                 example, 

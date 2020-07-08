@@ -11,6 +11,13 @@ const useStyles = makeStyles({
         flex: 1,
         textDecoration: 'none',
         color: Colors.reactBlue
+    },
+    iconStyles: {
+        color: Colors.reactBlue
+    },
+    textStyles: {
+        color: Colors.reactBlue,
+        fontWeight: 'bold'
     }
 });
 
@@ -25,24 +32,24 @@ const Header = props => {
                     className={classes.headerLinkStyles}
                     activeStyle={{color: Colors.reactBlue}}
                 >
-                    <Typography> 
+                    <Typography className={classes.textStyles}> 
                         Alistair Quinn
                     </Typography>
                 </NavLink>
                 <a href="https://www.linkedin.com/in/alistair-quinn-5b8878199/" target="_blank">
-                    <IconButton>
+                    <IconButton className={classes.iconStyles}>
                         <LinkedInIcon />
                     </IconButton>
                 </a>
                 <a href="https://github.com/alistairjoelquinn" target="_blank">
-                    <IconButton>
+                    <IconButton className={classes.iconStyles}>
                         <GitHubIcon />
                     </IconButton>
                 </a>
                 <NavLink 
                     to='/shop'
                 >
-                    <IconButton>
+                    <IconButton className={classes.iconStyles}>
                         <ShoppingCartIcon />
                     </IconButton>
                 </NavLink>

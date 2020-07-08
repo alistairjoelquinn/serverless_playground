@@ -1,23 +1,19 @@
 import React from 'react';
-import { Typography, Grid, Button } from '@material-ui/core';
+import { Grid, Button, ButtonGroup } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
+import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
+
 import Colors from '../../constants/Colors';
 
 const useStyles = makeStyles({
     button: {
-        color: 'tomato'
-    },
-    bannerText: {
-        width: '100%',
-        marginTop: 50,
-        color: Colors.paleWhite,
-        marginBottom: 50
+        color: 'tomato',
+        alignSelf: 'center'
     },
     background: {
         backgroundColor: Colors.grey,
-        height: '100vh',
-        paddingTop: 20,
-        paddingBottom: 20
+        width: '100%',
+        height: '100%'
     }
 });
 
@@ -28,24 +24,29 @@ const Shop = props => {
         <Grid container direction='column' className={classes.background}>
             <Grid item container>
                 <Grid item sm={2}/>
-                <Grid item sm={8}>
-                    <Typography variant='h4' color='white' className={classes.bannerText}>This is the place to buy things. Click on the button.</Typography>
-                </Grid>
-                <Grid item sm={2}/>
-            </Grid>
-            <Grid item container>
-                <Grid item sm={5}/>
-                <Grid item sm={2}>
+                <Grid item sm={8} className={classes.centered}>
                     <Button 
                         variant='contained' 
                         className={classes.button}
+                        endIcon={<ShoppingCartIcon />}
                         href='https://www.youtube.com/watch?v=SRcnnId15BA'
                         target='_blank'
                     >
                         Buy Things
                     </Button>
                 </Grid>
-                <Grid item sm={5}/>
+                <Grid item sm={2}/>
+            </Grid>
+            <Grid item container>
+                <Grid item sm={2}/>
+                <Grid item sm={8} className={classes.centered}>
+                    <ButtonGroup variant='contained'>
+                        <Button size="large" className={classes.button}>One</Button>
+                        <Button size="large" className={classes.button}>Two</Button>
+                        <Button size="large" className={classes.button}>Three</Button>
+                    </ButtonGroup>
+                </Grid>
+                <Grid item sm={2}/>
             </Grid>
         </Grid>
     );
