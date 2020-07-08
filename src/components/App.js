@@ -4,7 +4,7 @@ import { ThemeProvider, Grid } from '@material-ui/core';
 import theme from '../UI/theme';
 import Header from './Header';
 import { BrowserRouter, Route } from 'react-router-dom';
-import HomePage from './HomePage';
+import LandingPage from './LandingPage';
 import Shop from './Shop';
 
 export default function App() {
@@ -15,7 +15,7 @@ export default function App() {
                 <Grid item>
                     <Header />
                 </Grid>
-                    <Route exact path="/" component={HomePage} />
+                    <Route exact path="/" component={LandingPage} />
                     <Route path="/shop" component={Shop} />
                 </BrowserRouter>
             </Grid>

@@ -8,9 +8,17 @@ const LandingPageContent = () => {
             <Grid item xs={12} sm={8}>
                 <LandingCard 
                     datePosted="5th July, 2020"
+                    w1='al'
+                    w2='is'
+                    w3='tair'
+                    w4='quinn'
+                    wordType="noun"
+                    definition='well meaning and lovely.'
+                    example='"a benevolent smile"'
+                    learnMoreLink="https://github.com/alistairjoelquinn"
                 />
             </Grid>
-            <Grid item xs={12} sm={8}>
+            {/* <Grid item xs={12} sm={8}>
                 <LandingCard 
                     datePosted="3th July, 2020"
                 />
@@ -24,7 +32,7 @@ const LandingPageContent = () => {
                 <LandingCard 
                     datePosted="4th April, 2020"
                 />
-            </Grid>
+            </Grid> */}
         </Grid>
     );
 };

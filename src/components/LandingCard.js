@@ -23,7 +23,7 @@ const useStyles = makeStyles({
 const LandingCard = props => {
     const classes = useStyles();
     const bull = <span className={classes.bullet}>•</span>;
-    const { datePosted } = props
+    const { datePosted, wordType, definition, example, learnMoreLink } = props
     return (
         <Card>
             <CardHeader
@@ -45,19 +45,32 @@ const LandingCard = props => {
                     Word of the Day
                 </Typography>
                 <Typography variant="h5" component="h2">
-                    al{bull}is{bull}tair{bull}quinn
+                    {props.w1 && props.w1}{props.w1 && props.w2 && bull}
+                    {props.w2 && props.w2}{props.w2 && props.w3 && bull}
+                    {props.w3 && props.w3}{props.w3 && props.w4 && bull}
+                    {props.w4 && props.w4}{props.w4 && props.w5 && bull}
+                    {props.w5 && props.w5}{props.w5 && props.w6 && bull}
+                    {props.w6 && props.w6}{props.w6 && props.w7 && bull}
+                    {props.w7 && props.w7}
                 </Typography>
                 <Typography className={classes.pos} color="textSecondary">
-                    noun
+                    {wordType}
                 </Typography>
                 <Typography variant="body2" component="p">
-                    well meaning and lovely.
+                    {definition}
                     <br />
-                    {'"a benevolent smile"'}
+                    {example}
                 </Typography>
             </CardContent>
             <CardActions>
-                <Button size="small" color="secondary">Learn More</Button>
+                <Button 
+                    size="small" 
+                    color="secondary" 
+                    href={learnMoreLink}
+                    target="_blank"
+                >
+                    Learn More
+                </Button>
             </CardActions>
       </Card>
     );
