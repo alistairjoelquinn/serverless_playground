@@ -7,9 +7,10 @@ import cardData from '../../content/landingCardData'
 const LandingPageContent = () => {
     return (
         <Grid container direction='column' spacing={4}>
-            <Grid item xs={12} sm={8}>
-                {cardData.map(data => <LandingCard {...data} />)}
-            </Grid>
+            {cardData.map(data => <Grid item xs={12} sm={8}>
+                    <LandingCard {...data} />
+                </Grid>    
+            )}
         </Grid>
     );
 };

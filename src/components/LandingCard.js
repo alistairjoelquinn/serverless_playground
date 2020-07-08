@@ -37,13 +37,10 @@ const LandingCard = props => {
                         <ShareIcon />
                     </IconButton>
                 }
-                title="Welcome to the Internet"
+                title="Word of the Day"
                 subheader={datePosted}
             />
             <CardContent>
-                <Typography className={classes.title} color="textSecondary" gutterBottom>
-                    Word of the Day
-                </Typography>
                 <Typography variant="h5" component="h2">
                     {props.w1 && props.w1}{props.w1 && props.w2 && bull}
                     {props.w2 && props.w2}{props.w2 && props.w3 && bull}
