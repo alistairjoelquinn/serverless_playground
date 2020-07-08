@@ -27,18 +27,22 @@ const LandingCard = props => {
     const shareHandler = () => {
         if (navigator.share) {
             navigator.share({
-              title: 'My awesome post!',
-              text: 'This post may or may not contain the answer to the universe',
-              url: window.location.href
+                title: 'Word of the Day',
+                date: datePosted,
+                word: `${props.w1 ? props.w1 : ''}${props.w2 ? props.w2 : ''}${props.w3 ? props.w3 : ''}${props.w4 ? props.w4 : ''}${props.w5 ? props.w5 : ''}${props.w6 ? props.w6 : ''}${props.w7 ? props.w7 : ''}`,
+                type: wordType, 
+                definition, 
+                example, 
+                url: window.location.href
             }).then(() => {
-              console.log('Thanks for sharing!');
+                console.log('share was successful');
             })
             .catch(err => {
-              console.log(`Couldn't share because of`, err.message);
+                console.log('error attempting to share: ', err.message);
             });
-          } else {
-            console.log('web share not supported');
-          }
+        } else {
+            console.log('web share not supported, need to build alternative');
+        }
     }
 
     return (
