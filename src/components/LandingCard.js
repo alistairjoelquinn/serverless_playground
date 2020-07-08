@@ -23,7 +23,24 @@ const useStyles = makeStyles({
 const LandingCard = props => {
     const classes = useStyles();
     const bull = <span className={classes.bullet}>•</span>;
-    const { datePosted, wordType, definition, example, learnMoreLink } = props
+    const { datePosted, wordType, definition, example, learnMoreLink } = props;
+    const shareHandler = () => {
+        if (navigator.share) {
+            navigator.share({
+              title: 'My awesome post!',
+              text: 'This post may or may not contain the answer to the universe',
+              url: window.location.href
+            }).then(() => {
+              console.log('Thanks for sharing!');
+            })
+            .catch(err => {
+              console.log(`Couldn't share because of`, err.message);
+            });
+          } else {
+            console.log('web share not supported');
+          }
+    }
+
     return (
         <Card>
             <CardHeader
@@ -33,8 +50,11 @@ const LandingCard = props => {
                     </Avatar>
                 }
                 action={
-                    <IconButton aria-label="share">
-                        <ShareIcon />
+                    <IconButton 
+                        aria-label="share" 
+                        onClick={() => shareHandler()}
+                    >
+                        <ShareIcon  />
                     </IconButton>
                 }
                 title="Word of the Day"
