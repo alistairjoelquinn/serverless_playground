@@ -3,6 +3,7 @@ import { AppBar, Toolbar, Typography, makeStyles, IconButton } from '@material-u
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import Brightness2Icon from '@material-ui/icons/Brightness2';
 import { NavLink } from 'react-router-dom';
 import Colors from '../../constants/Colors';
 
@@ -15,16 +16,19 @@ const useStyles = makeStyles({
     iconStyles: {
         color: Colors.reactBlue
     },
+    iconDark: {
+        color: Colors.paleWhite
+    },
     textStyles: {
         color: Colors.reactBlue,
-        fontWeight: 'bold',
-        fontSize: 18
+        // fontWeight: 'bold',
+        fontSize: 18,
+        textStroke: `1px ${Colors.reactBlue}`
     }
 });
 
 const Header = props => {
     const classes = useStyles();
-
     return (
         <AppBar position='fixed'>
             <Toolbar>
@@ -37,6 +41,12 @@ const Header = props => {
                         Alistair Quinn
                     </Typography>
                 </NavLink>
+                <IconButton 
+                    className={props.darkMode ? classes.iconDark : classes.iconStyles}
+                    onClick={() => props.darkModeSwitch()}
+                >
+                    <Brightness2Icon />
+                </IconButton>
                 <a href="https://www.linkedin.com/in/alistair-quinn-5b8878199/" target="_blank">
                     <IconButton className={classes.iconStyles}>
                         <LinkedInIcon />
