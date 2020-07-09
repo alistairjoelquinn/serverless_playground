@@ -4,6 +4,7 @@ import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import Brightness2Icon from '@material-ui/icons/Brightness2';
+import LockOpenIcon from '@material-ui/icons/LockOpen';
 import { NavLink } from 'react-router-dom';
 import Colors from '../../constants/Colors';
 
@@ -62,6 +63,13 @@ const Header = props => {
                 >
                     <IconButton className={classes.iconStyles}>
                         <ShoppingCartIcon />
+                    </IconButton>
+                </NavLink>
+                <NavLink 
+                    to='/login'
+                >
+                    <IconButton className={classes.iconStyles}>
+                        <LockOpenIcon />
                     </IconButton>
                 </NavLink>
             </Toolbar>

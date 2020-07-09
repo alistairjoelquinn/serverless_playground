@@ -7,22 +7,14 @@ import Header from './Header';
 import { BrowserRouter, Route } from 'react-router-dom';
 import LandingPage from './LandingPage';
 import Shop from './Shop';
+import Login from './Login';
 
 export default function App() {
     const [darkMode, setDarkMode] = useState(false);
-    let theme;
-    if(darkMode) {
-        theme = darkTheme;
-    } else {
-        theme = lightTheme;
-    }
-
-    const darkModeSwitch = () => {
-        setDarkMode(currentMode => !currentMode);
-    };
-
+    const darkModeSwitch = _=> setDarkMode(currentMode => !currentMode);
+    
     return (
-        <ThemeProvider theme={theme}>
+        <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
             <Grid container direction='column'>
                 <BrowserRouter>
                     <Grid item>
@@ -33,7 +25,8 @@ export default function App() {
                     </Grid>
                     <Grid item container style={{marginTop: '58px'}}>
                         <Route exact path="/" component={LandingPage} />
-                        <Route path="/shop" component={Shop} />
+                        <Route exact path="/shop" component={Shop} />
+                        <Route exact path="/login" component={Login} />
                     </Grid>
                 </BrowserRouter>
             </Grid>
