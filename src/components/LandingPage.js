@@ -10,7 +10,7 @@ const useStyles = makeStyles({
         backgroundColor: Colors.grey,
         height: '100%',
         width: '100vw',
-        paddingTop: 20,
+        paddingTop: 40,
         paddingBottom: 20
     }
 });
@@ -19,7 +19,7 @@ const HomePage = props => {
     const classes = useStyles();
 
     return (
-        <Grid item container className={classes.background}>
+        <Grid container className={classes.background}>
             <Grid item sm={2}  xs={false}/>
             <Grid item sm={8}  xs={12}>
                 <LandingPageContent />
