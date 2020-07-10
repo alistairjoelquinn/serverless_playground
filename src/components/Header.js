@@ -22,7 +22,6 @@ const useStyles = makeStyles({
     },
     textStyles: {
         color: Colors.reactBlue,
-        // fontWeight: 'bold',
         fontSize: 18,
         textStroke: `1px ${Colors.reactBlue}`
     }
