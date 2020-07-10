@@ -29,7 +29,7 @@ const useStyles = makeStyles(theme => ({
 
 const Shop = props => {
     const classes = useStyles();
-
+    
     return (
         <div className={classes.root}>
             <Grid container spacing={3} className={classes.gridFormat}>
@@ -74,7 +74,6 @@ const Shop = props => {
                         <Typography>...tiny</Typography>
                     </Paper>
                 </Grid>
-                
             </Grid>
             <Grid container direction='column'>
                 <Grid item container className={classes.buttonContainer}>
