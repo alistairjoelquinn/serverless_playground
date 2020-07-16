@@ -4,7 +4,7 @@ import { ThemeProvider, Grid } from '@material-ui/core';
 import lightTheme from '../UI/lightTheme';
 import darkTheme from '../UI/darkTheme';
 import Header from './Header';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Route, Redirect } from 'react-router-dom';
 import LandingPage from './LandingPage';
 import Shop from './Shop';
 import Login from './Login';
