@@ -41,7 +41,7 @@ const Login = () => {
                     <LockOpenIcon />
                 </Avatar>
                 <Typography component="h1" variant="h5">
-                    Hello Handsome
+                    Hello
                 </Typography>
                 <form className={classes.form} noValidate>
                     <TextField
