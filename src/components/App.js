@@ -11,19 +11,19 @@ import Login from './Login';
 
 export default function App() {
     const [darkMode, setDarkMode] = useState(false);
-    const darkModeSwitch = _=> setDarkMode(currentMode => !currentMode);
-    
+    const darkModeSwitch = _ => setDarkMode(currentMode => !currentMode);
+
     return (
         <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
             <Grid container direction='column'>
                 <BrowserRouter>
                     <Grid item>
-                        <Header 
+                        <Header
                             darkModeSwitch={darkModeSwitch}
                             darkMode={darkMode}
                         />
                     </Grid>
-                    <Grid item container style={{marginTop: '50px'}}>
+                    <Grid item container style={{ marginTop: '50px' }}>
                         <Route exact path="/" component={LandingPage} />
                         <Route exact path="/shop" component={Shop} />
                         <Route exact path="/login" component={Login} />
