@@ -32,16 +32,16 @@ const Header = props => {
     return (
         <AppBar position='fixed'>
             <Toolbar>
-                <NavLink 
-                    to='/' 
+                <NavLink
+                    to='/'
                     className={classes.headerLinkStyles}
-                    activeStyle={{color: Colors.reactBlue}}
+                    activeStyle={{ color: Colors.reactBlue }}
                 >
-                    <Typography className={classes.textStyles}> 
+                    <Typography className={classes.textStyles}>
                         Alistair Quinn
                     </Typography>
                 </NavLink>
-                <IconButton 
+                <IconButton
                     className={props.darkMode ? classes.iconDark : classes.iconStyles}
                     onClick={() => props.darkModeSwitch()}
                 >
@@ -57,14 +57,7 @@ const Header = props => {
                         <GitHubIcon />
                     </IconButton>
                 </a>
-                <NavLink 
-                    to='/shop'
-                >
-                    <IconButton className={classes.iconStyles}>
-                        <ShoppingCartIcon />
-                    </IconButton>
-                </NavLink>
-                <NavLink 
+                <NavLink
                     to='/login'
                 >
                     <IconButton className={classes.iconStyles}>

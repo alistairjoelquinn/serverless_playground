@@ -25,7 +25,6 @@ export default function App() {
                     </Grid>
                     <Grid item container style={{ marginTop: '50px' }}>
                         <Route exact path="/" component={LandingPage} />
-                        <Route exact path="/shop" component={Shop} />
                         <Route exact path="/login" component={Login} />
                     </Grid>
                 </BrowserRouter>
